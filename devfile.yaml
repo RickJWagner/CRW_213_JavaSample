@@ -34,14 +34,14 @@ commands:
   -
     name: 1. Build
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/devspacesjavasample'
+      - workdir: '${CHE_PROJECTS_ROOT}/crwjavasample'
         type: exec
         command: mvn  clean package
         component: maven
   -
     name: 2. Run
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/devspacesjavasample'
+      - workdir: '${CHE_PROJECTS_ROOT}/crwjavasample'
         type: exec
         command: mvn  clean package exec:java -Dexec.mainClass="hello.HelloWorld"
         component: maven

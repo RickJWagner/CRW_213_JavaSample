@@ -4,19 +4,19 @@ metadata:
   generateName: java-maven
 projects: 
   - 
-    name: devspacesjavasample
+    name: crwjavasample
     source: 
       branch: main
-      location: "https://github.com/RickJWagner/DevSpaces_JavaSample"
+      location: "https://github.com/RickJWagner/CRW_213_JavaSample"
       type: git
 components:
   -
     type: chePlugin
-    id: redhat/quarkus-java11/latest
+    id: redhat/java8/latest
   -
     type: dockerimage
     alias: maven
-    image: quay.io/devspaces/udi-rhel8:3.1
+    image: registry.redhat.io/codeready-workspaces/plugin-java8-rhel8:2.13
     env:
       - name: JAVA_OPTS
         value: "-XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10
